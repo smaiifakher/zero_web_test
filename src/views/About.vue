@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>{{ pageName }}</h1>
-    <p>{{ pageDes }}</p>
+    <p v-format="60" v-bold="40"> {{ pageDes }}</p>
   </div>
 </template>
 <script>
@@ -12,7 +12,15 @@ export default {
       pageDes: "This is about us page"
     };
   },
-  name: "about"
+  directives: {
+    bold: {
+      bind: function (el) {
+        el.style.fontWeight = "bold"
+      }
+    }
+  },
+  name: "about",
+
 }
 
 </script>

@@ -6,7 +6,7 @@
     <h3 class="post-title">
       {{ title }} </h3>
     <span class="post-date">{{ date }}</span>
-    <p class="post-content">{{ content | shorten }}</p>
+    <p class="post-content">{{ content | shorten(100, "  more") }}</p>
     <div class="row">
       <div class="col-sm-6">
         <div class="col-sm-6">
@@ -14,7 +14,7 @@
 
         </div>
         <div class="col-sm-6">
-          <span class="post-category">{{ category | reverse}} </span>
+          <span class="post-category">{{ category | reverse }} </span>
         </div>
       </div>
     </div>

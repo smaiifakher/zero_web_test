@@ -9,9 +9,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./scss/main.scss";
 import "normalize.css";
 import "./views/filter"
+import "./views/directives/directives"
 
 
 Vue.config.productionTip = false;
+
 
 
 new Vue({

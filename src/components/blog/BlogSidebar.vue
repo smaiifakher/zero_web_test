@@ -1,12 +1,22 @@
 <template>
   <div class="sidebar-xidgets">
-    testing sidebar
+    {{ title | uppercase }}
   </div>
 </template>
 
 <script>
 export default {
-  name: "blogsidebar"
+  data: function () {
+    return {
+      title: "Testing"
+    }
+  },
+  name: "blogsidebar",
+  filters: {
+    uppercase:function (v){
+      return v.toUpperCase();
+    }
+  }
 }
 </script>
 
